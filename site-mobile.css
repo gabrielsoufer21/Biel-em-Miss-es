@@ -1,0 +1,151 @@
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:#121212;color:#fff;overflow-x:hidden}
+img,video,iframe{max-width:100%}
+
+/* =========================================================
+   MENU
+========================================================= */
+.menu{position:fixed;top:0;left:0;width:100%;height:80px;display:flex;align-items:center;justify-content:space-between;padding:0 6%;z-index:1000;background:#FAF4E4;backdrop-filter:blur(10px)}
+.logo{font-size:13px;font-weight:bold;letter-spacing:1px;color:#121212}
+nav{display:flex;align-items:center;gap:30px}
+nav a{text-decoration:none;color:#121212;font-size:11px}
+.menu-button{background:#121212;color:#FAF4E4;padding:10px 18px;border-radius:20px;text-decoration:none;font-size:10px}
+@media(max-width:768px){.menu{height:64px;padding:0 18px}.logo{font-size:12px;max-width:150px}nav{display:none}.menu-button{padding:9px 15px;font-size:9px}}
+
+/* =========================================================
+   BOTÕES PRINCIPAIS
+========================================================= */
+.main-button,.main-button2{display:inline-block;background:#FAF4E4;color:#121212;padding:13px 24px;border-radius:30px;text-decoration:none;font-size:11px;margin-top:25px;transition:transform .25s ease,opacity .25s ease}
+.main-button:hover,.main-button2:hover{transform:translateY(-3px);opacity:.9}
+@media(max-width:768px){.main-button,.main-button2{padding:12px 20px;font-size:10px;margin-top:20px}}
+
+/* =========================================================
+   SEÇÃO INICIAL / HERO
+========================================================= */
+.hero{min-height:110vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 20px;background-image:url("Imagens/inicial.png");background-size:cover;background-position:center 20%;background-color:#FAF4E4}
+.hero-content{width:100%;max-width:750px}
+.hero h1{font-size:100px;line-height:.95;letter-spacing:1px}
+@media(max-width:768px){.hero{min-height:100svh;padding:90px 22px 55px;background-position:center}.hero-content{max-width:100%}.hero h1{font-size:clamp(42px,13vw,58px);line-height:.95;letter-spacing:-2px}}
+
+/* =========================================================
+   CONFIGURAÇÃO DAS SEÇÕES
+========================================================= */
+.video-section,.participate,.final-section{min-height:100vh;padding:120px 7%}
+.section-title{text-align:center;margin-bottom:50px}
+.section-title p{font-size:9px;letter-spacing:2px;margin-bottom:12px}
+.section-title h2{font-size:40px;letter-spacing:-2px}
+@media(max-width:768px){.video-section,.participate,.final-section{min-height:auto;padding:80px 18px}.section-title{margin-bottom:30px}.section-title p{font-size:8px;letter-spacing:1.5px}.section-title h2{font-size:clamp(28px,9vw,36px);letter-spacing:-1.5px;line-height:1.05}}
+
+/* =========================================================
+   HISTÓRIA / FOTO + ABA DE TEXTO
+========================================================= */
+.historia-section{position:relative;width:100%;height:65vh;min-height:500px;background:#FAF4E4;overflow:visible}
+.historia-image{width:100%;height:100%;background-image:url("Imagens/Informativo.png");background-size:130%;background-position:center;background-repeat:no-repeat;background-color:#FAF4E4}
+.historia-toggle{position:absolute;left:0;bottom:0;width:100%;height:6px;padding:0;margin:0;border:none;background:#FAF4E4;cursor:pointer;z-index:20}
+.historia-toggle span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:68px;height:68px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#FAF4E4;color:#121212;font-size:30px;font-weight:bold;line-height:1;z-index:30;transition:transform .3s ease,box-shadow .25s ease}
+.historia-toggle:hover span{transform:translate(-50%,-50%) scale(1.08);box-shadow:0 8px 25px rgba(0,0,0,.15)}
+.historia-panel{width:100%;max-height:0;overflow:hidden;background:#FAF4E4;position:relative;z-index:10;transition:max-height .7s cubic-bezier(.77,0,.18,1)}
+.historia-panel.aberto{max-height:1200px}
+.historia-content{width:min(1000px,90%);margin:0 auto;padding:70px 20px 100px}
+.historia-content h2{margin:0 0 25px;font-size:40px;line-height:1;letter-spacing:-2px;color:#121212}
+.historia-content p{max-width:900px;margin:0 0 35px;font-size:15px;line-height:1.5;color:#121212}
+.historia-toggle.aberto span{transform:translate(-50%,-50%) rotate(180deg)}
+.historia-toggle.aberto:hover span{transform:translate(-50%,-50%) rotate(180deg) scale(1.08)}
+@media(max-width:768px){.historia-section{height:62svh;min-height:440px}.historia-image{background-size:cover;background-position:center}.historia-toggle{height:5px}.historia-toggle span{width:58px;height:58px;font-size:25px}.historia-panel.aberto{max-height:1800px}.historia-content{width:90%;padding:52px 5px 70px}.historia-content h2{font-size:clamp(34px,10vw,44px);letter-spacing:-1px}.historia-content p{font-size:18px;line-height:1.55;margin-bottom:28px}}
+
+/* =========================================================
+   CARROSSEL DE VÍDEOS
+========================================================= */
+.carousel{display:flex;align-items:center;gap:20px;width:100%}
+.video-container{display:flex;gap:20px;width:100%;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x proximity;padding:20px 10px;scrollbar-width:none}
+.video-container::-webkit-scrollbar{display:none}
+.video-card{width:220px;min-width:220px;flex-shrink:0;background:#121212;border-radius:8px;overflow:hidden;box-shadow:0 5px 20px rgba(244,243,243,.08);transition:transform .3s ease,box-shadow .3s ease}
+.video-card iframe{width:100%;aspect-ratio:9/16;display:block;border:none}
+.video-card.video-destaque{transform:scale(1.08);z-index:10;box-shadow:0 20px 50px rgba(151,151,151,.25)}
+.arrow{width:40px;height:40px;min-width:40px;border-radius:50%;border:none;background:#FAF4E4;color:#121212;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:20}
+.video-wrapper{position:relative;width:100%;aspect-ratio:9/16;overflow:hidden}
+.video-wrapper iframe{width:100%;height:100%;border:none;display:block}
+.video-capa{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;cursor:pointer}
+.play-button{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:60px;border:none;border-radius:50%;background:rgba(255,255,255,.9);color:#121212;font-size:25px;cursor:pointer;z-index:3;display:flex;align-items:center;justify-content:center}
+.play-button:hover{transform:translate(-50%,-50%) scale(1.1)}
+@media(max-width:768px){.carousel{gap:10px}.video-container{gap:14px;padding:15px 4px 20px;scroll-snap-type:x mandatory;overscroll-behavior-x:contain}.video-card{width:min(68vw,230px);min-width:min(68vw,230px);border-radius:12px;scroll-snap-align:center}.video-card.video-destaque{transform:none}.arrow{width:36px;height:36px;min-width:36px;font-size:14px}.play-button{width:54px;height:54px;font-size:22px}}
+
+/* =========================================================
+   REDES SOCIAIS
+========================================================= */
+.social{text-align:center;margin-top:80px;transform:translateY(-150px);color:#db2222}
+.social p{font-size:14px;letter-spacing:2px;margin-bottom:5px}
+.social-icons{display:flex;justify-content:center;gap:20px}
+.social-icons a{width:70px;height:70px;border-radius:50%;background:#000;display:flex;align-items:center;justify-content:center;color:#FAF4E4;text-decoration:none;box-shadow:0 3px 10px rgba(34,34,34,.581);transition:transform .3s ease}
+.social-icons a:hover{transform:translateY(-5px)}
+@media(max-width:768px){.social{margin-top:50px;transform:none}.social p{font-size:11px;letter-spacing:1.5px;margin-bottom:12px}.social-icons{gap:12px;flex-wrap:wrap}.social-icons a{width:54px;height:54px;font-size:18px}}
+
+/* =========================================================
+   PARTICIPAR
+========================================================= */
+.participate{background:#020202}
+.participate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.participate-card{background:#121212;border-radius:8px;overflow:hidden}
+.participate-card img{width:100%;height:240px;object-fit:cover;display:block}
+.card-content{padding:25px}
+.card-content h3{margin:10px 0;font-size:22px}
+.card-content p{color:#666;font-size:13px;line-height:1.6}
+@media(max-width:768px){.participate{padding-left:18px;padding-right:18px}.participate-grid{grid-template-columns:1fr;gap:18px}.participate-card{border-radius:12px}.participate-card img{height:210px}.card-content{padding:20px}.card-content h3{font-size:20px}.card-content p{font-size:14px}}
+
+/* =========================================================
+   SEÇÃO DOS 3 TÓPICOS
+========================================================= */
+.topicos{position:relative;width:100%}
+.topico{position:sticky;top:0;width:100%;height:100vh;min-height:600px;overflow:hidden;opacity:1;transition:opacity .05s linear}
+.topico-imagem{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;transform:translateX(300px)}
+.topico-conteudo{position:absolute;top:0;left:0;width:58%;height:100%;background:#121212;display:flex;flex-direction:column;justify-content:center;padding-left:7%;padding-right:10%;z-index:2}
+.topico-conteudo::after{content:"";position:absolute;top:0;right:-180px;width:200px;height:100%;background:#121212;clip-path:polygon(0 0,0 100%,100% 50%)}
+.numero{font-size:14px;letter-spacing:3px;color:#FAF4E4;margin-bottom:25px}
+.topico-conteudo h2{font-size:clamp(45px,6vw,80px);line-height:.95;letter-spacing:-4px;margin-bottom:30px}
+.topico-conteudo p{max-width:450px;font-size:15px;line-height:1.6;color:#FAF4E4}
+@media(max-width:768px){.topico{position:relative;height:auto;min-height:100svh;display:flex;flex-direction:column;overflow:hidden}.topico-imagem{position:relative;order:1;width:100%;height:48svh;min-height:300px;transform:none;object-fit:cover}.topico-conteudo{position:relative;order:2;width:100%;height:auto;min-height:52svh;padding:55px 24px 65px;justify-content:center}.topico-conteudo::after{display:none}.numero{font-size:11px;letter-spacing:2px;margin-bottom:18px}.topico-conteudo h2{font-size:clamp(38px,12vw,54px);letter-spacing:-2px;margin-bottom:22px}.topico-conteudo p{max-width:none;font-size:16px;line-height:1.55}}
+
+/* =========================================================
+   SEÇÃO FINAL
+========================================================= */
+.final-section{display:flex;justify-content:center;align-items:center;text-align:center;background-image:url("Imagens/mapa.png");background-size:cover;background-position:center;transform:translateY(60px);background-color:#FAF4E4}
+.final-section h2{font-size:50px;line-height:1;letter-spacing:-3px;margin:-10px 0;color:#121212}
+.final-section a{background-color:#121212;color:#FAF4E4;font-size:13px}
+@media(max-width:768px){.final-section{min-height:80svh;padding:80px 20px;transform:none;background-position:center}.final-section h2{font-size:clamp(36px,11vw,48px);letter-spacing:-2px}.final-section a{font-size:11px}}
+
+/* =========================================================
+   RODAPÉ - PLANETA
+========================================================= */
+.rodape-planeta{width:100%;height:135px;background:#FAF4E4;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.rodape-planeta__orbita{position:relative;width:100px;height:100px;display:flex;align-items:center;justify-content:center}
+.rodape-planeta__imagem{position:absolute;z-index:2;width:70px;height:70px;object-fit:contain;border-radius:50%;animation:planeta-flutuar 4s ease-in-out infinite}
+.rodape-planeta__texto{position:absolute;z-index:3;width:90%;height:90%;overflow:visible;animation:texto-planeta-girar 15s linear infinite}
+.rodape-planeta__texto text{fill:#121212;font-family:"Poppins",Arial,sans-serif;font-size:47px;font-weight:600;letter-spacing:2px;text-transform:uppercase}
+@keyframes texto-planeta-girar{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes planeta-flutuar{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@media(max-width:768px){.rodape-planeta{height:110px}.rodape-planeta__orbita{width:90px;height:90px}.rodape-planeta__imagem{width:42px;height:42px}.rodape-planeta__texto{width:100%;height:100%}.rodape-planeta__texto text{font-size:13px;letter-spacing:1.5px}}
+
+/* =========================================================
+   AJUSTES FINAIS - CELULARES PEQUENOS
+========================================================= */
+@media(max-width:390px){
+    .hero h1{font-size:44px}
+    .historia-section{min-height:420px}
+    .historia-toggle span{width:56px;height:56px;font-size:24px}
+    .social-icons a{width:50px;height:50px}
+    .topico-conteudo{padding-left:20px;padding-right:20px}
+    .topico-conteudo h2{font-size:38px}
+}
+
+/* =========================================================
+   TABLETS / TELAS INTERMEDIÁRIAS
+========================================================= */
+@media(min-width:769px) and (max-width:1100px){
+    .hero h1{font-size:clamp(70px,9vw,100px)}
+    .topico-conteudo{width:60%;padding-left:6%;padding-right:8%}
+    .participate-grid{grid-template-columns:repeat(2,1fr)}
+}

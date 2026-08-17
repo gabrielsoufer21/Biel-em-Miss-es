@@ -29,12 +29,12 @@ body {
 
     position: fixed;
 
-    top: 0;
-    left: 0;
+    top: 20px;
+    left: 5%;
 
-    width: 100%;
+    width: 90%;
 
-    height: 80px;
+    height: 60px;
 
     display: flex;
 
@@ -42,13 +42,17 @@ body {
 
     justify-content: space-between;
 
-    padding: 0 6%;
+    padding: 0 20px;
 
     z-index: 1000;
 
-    background: #FAF4E4;;
+    background: #FAF4E4;
 
     backdrop-filter: blur(10px);
+
+    border-radius: 50px;
+
+    box-sizing: border-box;
 
 }
 

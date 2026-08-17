@@ -40,6 +40,21 @@ historiaToggle.addEventListener("click", function () {
 
 });
 
+
+const europaToggle =
+    document.getElementById("europaToggle");
+
+const europaPanel =
+    document.getElementById("europaPanel");
+
+europaToggle.addEventListener("click", function () {
+
+    europaPanel.classList.toggle("aberto");
+
+    europaToggle.classList.toggle("aberto");
+
+});
+
 /* ================================================= */
 /* DESTAQUE AO PASSAR O MOUSE */
 /* ================================================= */

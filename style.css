@@ -1594,7 +1594,6 @@ nav a {
     }
 
 }
-
 /* ================================================= */
 /* PARTICIPAR */
 /* ================================================= */
@@ -1667,201 +1666,9 @@ nav a {
 
 }
 
+
 /* ========================================= */
 /* SEÇÃO DOS 3 TÓPICOS */
-/* ========================================= */
-
-.topicos {
-    width: 100%;
-}
-
-
-/* ========================================= */
-/* CADA TÓPICO */
-/* ========================================= */
-
-.topico {
-
-    position: relative;
-
-    width: 100%;
-
-    height: 100vh;
-
-    min-height: 600px;
-
-    overflow: hidden;
-
-}
-
-
-/* ========================================= */
-/* IMAGEM */
-/* ========================================= */
-
-.topico-imagem {
-
-    position: absolute;
-
-    top: 0;
-    right: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-}
-
-
-/* ========================================= */
-/* BLOCO BRANCO */
-/* ========================================= */
-
-.topico-conteudo {
-
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    width: 55%;
-    height: 100%;
-
-    background: rgb(8, 8, 8);
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    padding: 8%;
-
-    /*
-    Cria a diagonal no lado direito
-    */
-
-    clip-path: polygon(
-        0 0,
-        75% 0,
-        100% 50%,
-        75% 100%,
-        0 100%
-    );
-
-}
-
-
-/* ========================================= */
-/* NÚMERO */
-/* ========================================= */
-
-.numero {
-
-    font-size: 14px;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 25px;
-
-    color: #666;
-
-}
-
-
-/* ========================================= */
-/* TÍTULO */
-/* ========================================= */
-
-.topico-conteudo h2 {
-
-    font-size: clamp(45px, 5vw, 80px);
-
-    line-height: 0.95;
-
-    letter-spacing: -3px;
-
-    margin-bottom: 30px;
-
-}
-
-
-/* ========================================= */
-/* TEXTO */
-/* ========================================= */
-
-.topico-conteudo p {
-
-    max-width: 450px;
-
-    font-size: 18px;
-
-    line-height: 1.6;
-
-    color: #555;
-
-}
-
-
-
-
-/* ================================================= */
-/* SEÇÃO FINAL */
-/* ================================================= */
-
-.final-section {
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    text-align: center;
-
-    
-    background-image:
-    
-        url("Imagens/mapa.png");
-        
-
-    background-size: cover;
-
-    background-position: center;
-
-    transform: translateY(60px);
-
-    background-color: #FAF4E4;
-
-}
-
-
-.final-section h2 {
-
-    font-size: 50px;
-
-    line-height: 1;
-
-    letter-spacing: -3px;
-
-    margin: -10px 0;
-
-    color: #121212;
-
-}
-
-
-.final-section a {
-    background-color: #121212;
-
-    color: #FAF4E4;
-
-    font-size: 13px;
-}
-
-/* ========================================= */
-/* ÁREA DOS TÓPICOS */
 /* ========================================= */
 
 .topicos {
@@ -1891,9 +1698,35 @@ nav a {
 
     overflow: hidden;
 
-    opacity: 1;
+}
 
-    transition: opacity 0.05s linear;
+
+/* ========================================= */
+/* ORDEM DOS TÓPICOS */
+/* ========================================= */
+
+/*
+   Cada tópico seguinte fica por cima
+   do tópico anterior durante a rolagem.
+*/
+
+.topico:nth-child(1) {
+
+    z-index: 1;
+
+}
+
+
+.topico:nth-child(2) {
+
+    z-index: 2;
+
+}
+
+
+.topico:nth-child(3) {
+
+    z-index: 3;
 
 }
 
@@ -1904,14 +1737,14 @@ nav a {
 
 .topico-imagem {
 
-    position: center;
-    transform: translateX(300px);
-    transform: translateY(00px);
+    position: absolute;
 
     top: 0;
+
     left: 0;
 
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -1920,7 +1753,7 @@ nav a {
 
 
 /* ========================================= */
-/* BLOCO BRANCO */
+/* BLOCO DE CONTEÚDO */
 /* ========================================= */
 
 .topico-conteudo {
@@ -1928,6 +1761,7 @@ nav a {
     position: absolute;
 
     top: 0;
+
     left: 0;
 
     width: 58%;
@@ -2030,27 +1864,88 @@ nav a {
 
 }
 
-.topico {
-    position: sticky;
-    top: 0;
-    height: 100vh;
+
+/* ================================================= */
+/* SEÇÃO FINAL */
+/* ================================================= */
+
+.final-section {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background-image:
+
+        url("Imagens/mapa.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-color: #FAF4E4;
+
 }
+
+
+/* ========================================= */
+/* TÍTULO FINAL */
+/* ========================================= */
+
+.final-section h2 {
+
+    font-size: 50px;
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin: -10px 0;
+
+    color: #121212;
+
+}
+
+
+/* ========================================= */
+/* BOTÃO FINAL */
+/* ========================================= */
+
+.final-section a {
+
+    background-color: #121212;
+
+    color: #FAF4E4;
+
+    font-size: 13px;
+
+}
+
 
 /* =========================================================
    RODAPÉ - PLANETA
 ========================================================= */
 
 .rodape-planeta {
+
     width: 100%;
+
     height: 135px;
 
     background: #FAF4E4;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     overflow: hidden;
+
 }
 
 
@@ -2059,14 +1954,19 @@ nav a {
 ========================================================= */
 
 .rodape-planeta__orbita {
+
     position: relative;
 
     width: 100px;
+
     height: 100px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
 }
 
 
@@ -2075,11 +1975,13 @@ nav a {
 ========================================================= */
 
 .rodape-planeta__imagem {
+
     position: absolute;
 
     z-index: 2;
 
     width: 70px;
+
     height: 70px;
 
     object-fit: contain;
@@ -2087,6 +1989,7 @@ nav a {
     border-radius: 50%;
 
     animation: planeta-flutuar 4s ease-in-out infinite;
+
 }
 
 
@@ -2095,16 +1998,19 @@ nav a {
 ========================================================= */
 
 .rodape-planeta__texto {
+
     position: absolute;
 
     z-index: 3;
 
     width: 90%;
+
     height: 90%;
 
     overflow: visible;
 
     animation: texto-planeta-girar 15s linear infinite;
+
 }
 
 
@@ -2113,6 +2019,7 @@ nav a {
 ========================================================= */
 
 .rodape-planeta__texto text {
+
     fill: #121212;
 
     font-family: "Poppins", Arial, sans-serif;
@@ -2124,6 +2031,7 @@ nav a {
     letter-spacing: 2px;
 
     text-transform: uppercase;
+
 }
 
 
@@ -2134,11 +2042,15 @@ nav a {
 @keyframes texto-planeta-girar {
 
     from {
+
         transform: rotate(0deg);
+
     }
 
     to {
+
         transform: rotate(360deg);
+
     }
 
 }
@@ -2152,52 +2064,30 @@ nav a {
 
     0%,
     100% {
+
         transform: translateY(0);
+
     }
 
     50% {
+
         transform: translateY(-3px);
+
     }
 
 }
 
 
-/* =========================================================
-   CELULAR
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .rodape-planeta {
-        height: 70px;
-    }
-
-
-    .rodape-planeta__orbita {
-        width: 70px;
-        height: 70px;
-    }
-
-
-    .rodape-planeta__imagem {
-        width: 50px;
-        height: 50px;
-    }
-
-
-    .rodape-planeta__texto text {
-        font-size: 47px;
-
-        letter-spacing: 1.5px;
-    }
-
-}
 /* ================================================= */
 /* CELULAR */
 /* ================================================= */
 
 @media (max-width: 768px) {
 
+
+    /* =========================================
+       MENU
+    ========================================= */
 
     .menu {
 
@@ -2215,6 +2105,10 @@ nav a {
     }
 
 
+    /* =========================================
+       HERO
+    ========================================= */
+
     .hero {
 
         padding: 10px 20px 20px;
@@ -2229,10 +2123,11 @@ nav a {
         letter-spacing: -2px;
 
     }
-    
 
 
-
+    /* =========================================
+       SEÇÕES
+    ========================================= */
 
     .video-section,
     .participate,
@@ -2242,8 +2137,47 @@ nav a {
 
     }
 
-
-
 }
 
 
+/* =========================================================
+   CELULAR - RODAPÉ PLANETA
+========================================================= */
+
+@media (max-width: 600px) {
+
+
+    .rodape-planeta {
+
+        height: 70px;
+
+    }
+
+
+    .rodape-planeta__orbita {
+
+        width: 70px;
+
+        height: 70px;
+
+    }
+
+
+    .rodape-planeta__imagem {
+
+        width: 50px;
+
+        height: 50px;
+
+    }
+
+
+    .rodape-planeta__texto text {
+
+        font-size: 47px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+}

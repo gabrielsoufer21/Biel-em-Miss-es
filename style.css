@@ -966,6 +966,544 @@ nav a {
 
 }
 
+
+
+/* =========================================================
+   SEÇÃO EUROPA
+========================================================= */
+
+.europa-section {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 65vh;
+
+    min-height: 500px;
+
+    overflow: visible;
+
+}
+
+
+/* =========================================================
+   FOTO PRINCIPAL
+========================================================= */
+
+.europa-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    background-image: url("Imagens/informativo.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+}
+
+
+/* =========================================================
+   LINHA
+========================================================= */
+
+.europa-toggle {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 6px;
+
+    padding: 0;
+
+    margin: 0;
+
+    border: none;
+
+    background: #FAF4E4;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+}
+
+
+/* =========================================================
+   BOTÃO CIRCULAR
+========================================================= */
+
+.europa-toggle span {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 68px;
+
+    height: 68px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #FAF4E4;
+
+    color: #121212;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+    z-index: 30;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* =========================================================
+   HOVER DA SETA
+========================================================= */
+
+.europa-toggle:hover span {
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.08);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* =========================================================
+   ABA
+========================================================= */
+
+.europa-panel {
+
+    width: 100%;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    position: relative;
+
+    z-index: 10;
+
+    transition:
+        max-height 0.8s cubic-bezier(.77, 0, .18, 1);
+
+}
+
+
+/* =========================================================
+   ABA ABERTA
+========================================================= */
+
+.europa-panel.aberto {
+
+    max-height: 2500px;
+
+}
+
+
+/* =========================================================
+   CONTEÚDO DA ABA
+========================================================= */
+
+.europa-content {
+
+    width: min(1000px, 92%);
+
+    margin: 0 auto;
+
+    padding: 55px 20px 80px;
+
+}
+
+
+/* =========================================================
+   IMAGEM DE INTRODUÇÃO
+========================================================= */
+
+.europa-intro {
+
+    width: 100%;
+
+    margin: 0 auto 45px;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.europa-intro img {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    height: auto;
+
+    object-fit: contain;
+
+}
+
+
+/* =========================================================
+   ITENS DA EUROPA
+========================================================= */
+
+.europa-item {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    min-height: 210px;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================================================
+   TEXTO DOS ITENS
+========================================================= */
+
+.europa-text {
+
+    width: 60%;
+
+    padding-right: 20px;
+
+}
+
+
+/* =========================================================
+   TÍTULO EUROPA
+========================================================= */
+
+.europa-text h2 {
+
+    margin: 0 0 8px;
+
+    font-size: 29px;
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+
+    color: #dc2626;
+
+    font-weight: 800;
+
+}
+
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.europa-text p {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.45;
+
+    color: #222;
+
+}
+
+
+/* =========================================================
+   ÁREA DA IMAGEM
+========================================================= */
+
+.europa-item-image {
+
+    width: 35%;
+
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =========================================================
+   IMAGENS
+========================================================= */
+
+.europa-item-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+
+/* =========================================================
+   SETA ABERTA
+========================================================= */
+
+.europa-toggle.aberto span {
+
+    transform:
+        translate(-50%, -50%)
+        rotate(180deg);
+
+}
+
+
+.europa-toggle.aberto:hover span {
+
+    transform:
+        translate(-50%, -50%)
+        rotate(180deg)
+        scale(1.08);
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 700px) {
+
+
+    /* FOTO */
+
+    .europa-section {
+
+        height: 55vh;
+
+        min-height: 400px;
+
+    }
+
+
+    .europa-image {
+
+        background-size: cover;
+
+        background-position: center;
+
+    }
+
+
+    /* LINHA */
+
+    .europa-toggle {
+
+        height: 6px;
+
+    }
+
+
+    /* BOTÃO */
+
+    .europa-toggle span {
+
+        width: 58px;
+
+        height: 58px;
+
+        font-size: 25px;
+
+    }
+
+
+    /* CONTEÚDO */
+
+    .europa-content {
+
+        width: 90%;
+
+        padding: 45px 0 65px;
+
+    }
+
+
+    /* IMAGEM DE INTRODUÇÃO */
+
+    .europa-intro {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .europa-intro img {
+
+        width: 100%;
+
+    }
+
+
+    /* ITENS */
+
+    .europa-item {
+
+        min-height: 170px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    /* TEXTO */
+
+    .europa-text {
+
+        width: 62%;
+
+        padding-right: 8px;
+
+    }
+
+
+    .europa-text h2 {
+
+        font-size: 27px;
+
+        margin-bottom: 7px;
+
+    }
+
+
+    .europa-text p {
+
+        font-size: 12px;
+
+        line-height: 1.4;
+
+    }
+
+
+    /* IMAGEM */
+
+    .europa-item-image {
+
+        width: 38%;
+
+        height: 160px;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 400px) {
+
+
+    .europa-section {
+
+        height: 50vh;
+
+        min-height: 360px;
+
+    }
+
+
+    .europa-toggle span {
+
+        width: 52px;
+
+        height: 52px;
+
+        font-size: 23px;
+
+    }
+
+
+    .europa-content {
+
+        width: 90%;
+
+    }
+
+
+    .europa-item {
+
+        min-height: 150px;
+
+    }
+
+
+    .europa-text h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    .europa-text p {
+
+        font-size: 11px;
+
+    }
+
+
+    .europa-item-image {
+
+        height: 145px;
+
+    }
+
+}
+
+
 /* ================================================= */
 /* PARTICIPAR */
 /* ================================================= */

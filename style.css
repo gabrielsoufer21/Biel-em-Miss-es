@@ -29,12 +29,12 @@ body {
 
     position: fixed;
 
-    top: 20px;
-    left: 5%;
+    top: 0;
+    left: 0;
 
-    width: 90%;
+    width: 100%;
 
-    height: 60px;
+    height: 80px;
 
     display: flex;
 
@@ -42,17 +42,13 @@ body {
 
     justify-content: space-between;
 
-    padding: 0 20px;
+    padding: 0 6%;
 
     z-index: 1000;
 
-    background: #FAF4E4;
+    background: #FAF4E4;;
 
     backdrop-filter: blur(10px);
-
-    border-radius: 50px;
-
-    box-sizing: border-box;
 
 }
 
@@ -173,7 +169,7 @@ nav a {
     padding: 100px 20px;
 
     background-image:
-        url("Imagens/inicial.png");
+        url("Imagens/Imagem\ 1.png");
 
     background-size: cover;
 
@@ -191,19 +187,41 @@ nav a {
 }
 
 
+.small-title {
 
+    font-size: 10px;
 
-.hero h1 {
+    letter-spacing: 2px;
 
-    font-size: 100px;
-
-    line-height: 0.95;
-
-    letter-spacing: 1px;
+    margin-bottom: 20px;
 
 }
 
 
+.hero h1 {
+
+    font-size: clamp(45px, 7vw, 85px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+
+}
+
+
+.description {
+
+    max-width: 500px;
+
+    margin: 30px auto;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color:#FAF4E4;
+
+}
 
 
 /* ================================================= */
@@ -283,15 +301,13 @@ nav a {
     width: 100%;
     height: 100%;
 
-    background-image: url("Imagens/informativo.png");
+    background-image: url("Imagens/Imagem\ 1.png");
 
-    background-size: 115%;
+    background-size: cover;
 
     background-position: center;
 
     background-repeat: no-repeat;
-
-    background-color: #FAF4E4;
 }
 
 
@@ -455,7 +471,7 @@ nav a {
 
     margin: 0 0 25px;
 
-    font-size: 40px;
+    font-size: clamp(45px, 6vw, 75px);
 
     line-height: 1;
 
@@ -475,7 +491,7 @@ nav a {
 
     max-width: 900px;
 
-    font-size: 15px;
+    font-size: clamp(20px, 2.3vw, 30px);
 
     line-height: 1.5;
 
@@ -537,8 +553,6 @@ nav a {
     .historia-image {
 
         background-position: center center;
-
-        background-size: contain;
     }
 
 
@@ -548,7 +562,7 @@ nav a {
 
     .historia-toggle {
 
-        height: 120px;
+        height: 5px;
     }
 
 
@@ -828,10 +842,6 @@ nav a {
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-.section-title {
-    color:#db2222;
-}
-
 /* ================================================= */
 /* CARROSSEL NO CELULAR */
 /* ================================================= */
@@ -906,8 +916,6 @@ nav a {
 
     transform: translateY(-150px);
 
-    color: #db2222;
-
 }
 
 
@@ -963,371 +971,6 @@ nav a {
 .social-icons a:hover {
 
     transform: translateY(-5px);
-
-}
-
-
-/* ================================================= */
-/* EUROPA */
-/* ================================================= */
-
-.europa-section {
-
-    position: relative;
-
-    width: 100%;
-
-    /*
-       NÃO colocar height aqui.
-       A seção precisa crescer quando
-       a aba for aberta.
-    */
-
-    min-height: 0;
-
-    overflow: visible;
-
-}
-
-
-/* ================================================= */
-/* FOTO PRINCIPAL DA EUROPA */
-/* ================================================= */
-
-.europa-image {
-
-    width: 100%;
-
-    height: 65vh;
-
-    min-height: 500px;
-
-    background-image: url("Imagens/informativo.png");
-
-    background-size: cover;
-
-    background-position: center;
-
-    background-repeat: no-repeat;
-
-}
-
-
-/* ================================================= */
-/* LINHA DA SETA */
-/* ================================================= */
-
-.europa-toggle {
-
-    position: absolute;
-
-    left: 0;
-
-    /*
-       A linha fica exatamente
-       no final da foto.
-    */
-
-    top: calc(65vh - 3px);
-
-    width: 100%;
-
-    height: 6px;
-
-    padding: 0;
-
-    margin: 0;
-
-    border: none;
-
-    background: #FAF4E4;
-
-    cursor: pointer;
-
-    z-index: 20;
-
-}
-
-
-/* ================================================= */
-/* BOTÃO CIRCULAR */
-/* ================================================= */
-
-.europa-toggle span {
-
-    position: absolute;
-
-    left: 50%;
-
-    top: 50%;
-
-    transform: translate(-50%, -50%);
-
-    width: 68px;
-
-    height: 68px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #FAF4E4;
-
-    color: #121212;
-
-    font-size: 30px;
-
-    font-weight: bold;
-
-    line-height: 1;
-
-    z-index: 30;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-
-}
-
-
-/* ================================================= */
-/* HOVER DA SETA */
-/* ================================================= */
-
-.europa-toggle:hover span {
-
-    transform:
-        translate(-50%, -50%)
-        scale(1.08);
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.15);
-
-}
-
-
-/* ================================================= */
-/* ABA EUROPA */
-/* ================================================= */
-
-.europa-panel {
-
-    width: 100%;
-
-    /*
-       Fechada:
-       não aparece.
-    */
-
-    max-height: 0;
-
-    overflow: hidden;
-
-    background: #ffffff;
-
-    /*
-       A aba fica no fluxo normal.
-       Assim ela aumenta a altura da
-       seção e empurra a próxima seção.
-    */
-
-    position: relative;
-
-    z-index: 1;
-
-    transition:
-        max-height 0.8s cubic-bezier(.77, 0, .18, 1);
-
-}
-
-
-/* ================================================= */
-/* ABA ABERTA */
-/* ================================================= */
-
-.europa-panel.aberto {
-
-    max-height: 2500px;
-
-}
-
-
-/* ================================================= */
-/* CONTEÚDO DA ABA */
-/* ================================================= */
-
-.europa-content {
-
-    width: min(1000px, 92%);
-
-    margin: 0 auto;
-
-    padding: 55px 20px 80px;
-
-}
-
-
-/* ================================================= */
-/* IMAGEM DE INTRODUÇÃO */
-/* ================================================= */
-
-.europa-intro {
-
-    width: 100%;
-
-    margin: 0 auto 45px;
-
-    display: flex;
-
-    justify-content: center;
-
-}
-
-
-.europa-intro img {
-
-    display: block;
-
-    width: 100%;
-
-    max-width: 900px;
-
-    height: auto;
-
-    object-fit: contain;
-
-}
-
-
-/* ================================================= */
-/* ITENS DA EUROPA */
-/* ================================================= */
-
-.europa-item {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    width: 100%;
-
-    min-height: 210px;
-
-    margin-bottom: 25px;
-
-}
-
-
-/* ================================================= */
-/* TEXTO DOS ITENS */
-/* ================================================= */
-
-.europa-text {
-
-    width: 60%;
-
-    padding-right: 20px;
-
-}
-
-
-/* ================================================= */
-/* TÍTULO EUROPA */
-/* ================================================= */
-
-.europa-text h2 {
-
-    margin: 0 0 8px;
-
-    font-size: 29px;
-
-    line-height: 1;
-
-    letter-spacing: -1px;
-
-    color: #dc2626;
-
-    font-weight: 800;
-
-}
-
-
-/* ================================================= */
-/* TEXTO */
-/* ================================================= */
-
-.europa-text p {
-
-    margin: 0;
-
-    font-size: 13px;
-
-    line-height: 1.45;
-
-    color: #222;
-
-}
-
-
-/* ================================================= */
-/* ÁREA DAS IMAGENS */
-/* ================================================= */
-
-.europa-item-image {
-
-    width: 35%;
-
-    height: 190px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-}
-
-
-/* ================================================= */
-/* IMAGENS DOS ITENS */
-/* ================================================= */
-
-.europa-item-image img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: contain;
-
-}
-
-
-/* ================================================= */
-/* SETA ABERTA */
-/* ================================================= */
-
-.europa-toggle.aberto span {
-
-    transform:
-        translate(-50%, -50%)
-        rotate(180deg);
-
-}
-
-
-.europa-toggle.aberto:hover span {
-
-    transform:
-        translate(-50%, -50%)
-        rotate(180deg)
-        scale(1.08);
 
 }
 
@@ -1404,10 +1047,201 @@ nav a {
 
 }
 
+/* ========================================= */
+/* SEÇÃO DOS 3 TÓPICOS */
+/* ========================================= */
+
+.topicos {
+    width: 100%;
+}
+
+
+/* ========================================= */
+/* CADA TÓPICO */
+/* ========================================= */
+
+.topico {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100vh;
+
+    min-height: 600px;
+
+    overflow: hidden;
+
+}
+
+
+/* ========================================= */
+/* IMAGEM */
+/* ========================================= */
+
+.topico-imagem {
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* ========================================= */
+/* BLOCO BRANCO */
+/* ========================================= */
+
+.topico-conteudo {
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 55%;
+    height: 100%;
+
+    background: rgb(8, 8, 8);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 8%;
+
+    /*
+    Cria a diagonal no lado direito
+    */
+
+    clip-path: polygon(
+        0 0,
+        75% 0,
+        100% 50%,
+        75% 100%,
+        0 100%
+    );
+
+}
+
+
+/* ========================================= */
+/* NÚMERO */
+/* ========================================= */
+
+.numero {
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+
+    color: #666;
+
+}
+
+
+/* ========================================= */
+/* TÍTULO */
+/* ========================================= */
+
+.topico-conteudo h2 {
+
+    font-size: clamp(45px, 5vw, 80px);
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* ========================================= */
+/* TEXTO */
+/* ========================================= */
+
+.topico-conteudo p {
+
+    max-width: 450px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: #555;
+
+}
+
 
 /* ================================================= */
-/* SEÇÃO DOS 3 TÓPICOS */
+/* SEÇÃO FINAL */
 /* ================================================= */
+
+.final-section {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(3, 3, 3, 0.65)
+        ),
+        url("Imagens/mapa.png");
+        
+
+    background-size: cover;
+
+    background-position: center;
+
+    transform: translateY(60px);
+
+}
+
+
+.final-section h2 {
+
+    font-size: clamp(40px, 6vw, 70px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin: 20px 0;
+
+}
+
+
+
+
+.final-section p {
+
+    color: #FAF4E4;
+
+    font-size: 13px;
+
+}
+
+/* ========================================= */
+/* ÁREA DOS TÓPICOS */
+/* ========================================= */
 
 .topicos {
 
@@ -1418,9 +1252,9 @@ nav a {
 }
 
 
-/* ================================================= */
+/* ========================================= */
 /* CADA TÓPICO */
-/* ================================================= */
+/* ========================================= */
 
 .topico {
 
@@ -1436,48 +1270,27 @@ nav a {
 
     overflow: hidden;
 
-}
+    opacity: 1;
 
-
-/* ================================================= */
-/* ORDEM DOS TÓPICOS */
-/* ================================================= */
-
-.topico:nth-child(1) {
-
-    z-index: 1;
+    transition: opacity 0.05s linear;
 
 }
 
 
-.topico:nth-child(2) {
-
-    z-index: 2;
-
-}
-
-
-.topico:nth-child(3) {
-
-    z-index: 3;
-
-}
-
-
-/* ================================================= */
+/* ========================================= */
 /* IMAGEM */
-/* ================================================= */
+/* ========================================= */
 
 .topico-imagem {
 
-    position: absolute;
+    position: center;
+    transform: translateX(300px);
+    transform: translateY(00px);
 
     top: 0;
-
     left: 0;
 
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
@@ -1485,16 +1298,15 @@ nav a {
 }
 
 
-/* ================================================= */
-/* BLOCO DE CONTEÚDO */
-/* ================================================= */
+/* ========================================= */
+/* BLOCO BRANCO */
+/* ========================================= */
 
 .topico-conteudo {
 
     position: absolute;
 
     top: 0;
-
     left: 0;
 
     width: 58%;
@@ -1518,9 +1330,9 @@ nav a {
 }
 
 
-/* ================================================= */
+/* ========================================= */
 /* DIAGONAL */
-/* ================================================= */
+/* ========================================= */
 
 .topico-conteudo::after {
 
@@ -1547,9 +1359,9 @@ nav a {
 }
 
 
-/* ================================================= */
+/* ========================================= */
 /* NÚMERO */
-/* ================================================= */
+/* ========================================= */
 
 .numero {
 
@@ -1564,9 +1376,9 @@ nav a {
 }
 
 
-/* ================================================= */
+/* ========================================= */
 /* TÍTULO */
-/* ================================================= */
+/* ========================================= */
 
 .topico-conteudo h2 {
 
@@ -1581,15 +1393,15 @@ nav a {
 }
 
 
-/* ================================================= */
+/* ========================================= */
 /* TEXTO */
-/* ================================================= */
+/* ========================================= */
 
 .topico-conteudo p {
 
     max-width: 450px;
 
-    font-size: 15px;
+    font-size: 18px;
 
     line-height: 1.6;
 
@@ -1597,88 +1409,27 @@ nav a {
 
 }
 
-
-/* ================================================= */
-/* SEÇÃO FINAL */
-/* ================================================= */
-
-.final-section {
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    text-align: center;
-
-    background-image:
-
-        url("Imagens/mapa.png");
-
-    background-size: cover;
-
-    background-position: center;
-
-    background-color: #FAF4E4;
-
+.topico {
+    position: sticky;
+    top: 0;
+    height: 100vh;
 }
-
-
-/* ================================================= */
-/* TÍTULO FINAL */
-/* ================================================= */
-
-.final-section h2 {
-
-    font-size: 50px;
-
-    line-height: 1;
-
-    letter-spacing: -3px;
-
-    margin: -10px 0;
-
-    color: #121212;
-
-}
-
-
-/* ================================================= */
-/* BOTÃO FINAL */
-/* ================================================= */
-
-.final-section a {
-
-    background-color: #121212;
-
-    color: #FAF4E4;
-
-    font-size: 13px;
-
-}
-
 
 /* =========================================================
    RODAPÉ - PLANETA
 ========================================================= */
 
 .rodape-planeta {
-
     width: 100%;
-
     height: 135px;
 
-    background: #FAF4E4;
+    background: #000000;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     overflow: hidden;
-
 }
 
 
@@ -1687,19 +1438,14 @@ nav a {
 ========================================================= */
 
 .rodape-planeta__orbita {
-
     position: relative;
 
     width: 100px;
-
     height: 100px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
 }
 
 
@@ -1708,13 +1454,11 @@ nav a {
 ========================================================= */
 
 .rodape-planeta__imagem {
-
     position: absolute;
 
     z-index: 2;
 
     width: 70px;
-
     height: 70px;
 
     object-fit: contain;
@@ -1722,7 +1466,6 @@ nav a {
     border-radius: 50%;
 
     animation: planeta-flutuar 4s ease-in-out infinite;
-
 }
 
 
@@ -1731,29 +1474,25 @@ nav a {
 ========================================================= */
 
 .rodape-planeta__texto {
-
     position: absolute;
 
     z-index: 3;
 
     width: 90%;
-
     height: 90%;
 
     overflow: visible;
 
     animation: texto-planeta-girar 15s linear infinite;
-
 }
 
 
 /* =========================================================
-   TEXTO DO PLANETA
+   TEXTO
 ========================================================= */
 
 .rodape-planeta__texto text {
-
-    fill: #121212;
+    fill: #FAF4E4;
 
     font-family: "Poppins", Arial, sans-serif;
 
@@ -1764,7 +1503,6 @@ nav a {
     letter-spacing: 2px;
 
     text-transform: uppercase;
-
 }
 
 
@@ -1775,37 +1513,29 @@ nav a {
 @keyframes texto-planeta-girar {
 
     from {
-
         transform: rotate(0deg);
-
     }
 
     to {
-
         transform: rotate(360deg);
-
     }
 
 }
 
 
 /* =========================================================
-   MOVIMENTO DO PLANETA
+   MOVIMENTO SUTIL DO PLANETA
 ========================================================= */
 
 @keyframes planeta-flutuar {
 
     0%,
     100% {
-
         transform: translateY(0);
-
     }
 
     50% {
-
         transform: translateY(-3px);
-
     }
 
 }
@@ -1815,12 +1545,38 @@ nav a {
    CELULAR
 ========================================================= */
 
+@media (max-width: 600px) {
+
+    .rodape-planeta {
+        height: 110px;
+    }
+
+
+    .rodape-planeta__orbita {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .rodape-planeta__imagem {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .rodape-planeta__texto text {
+        font-size: 13px;
+
+        letter-spacing: 1.5px;
+    }
+
+}
+/* ================================================= */
+/* CELULAR */
+/* ================================================= */
+
 @media (max-width: 768px) {
 
-
-    /* -----------------------------------------
-       MENU
-    ----------------------------------------- */
 
     .menu {
 
@@ -1838,29 +1594,28 @@ nav a {
     }
 
 
-    /* -----------------------------------------
-       HERO
-    ----------------------------------------- */
-
     .hero {
 
-        padding: 10px 20px 20px;
+        padding: 100px 20px 60px;
 
     }
 
 
     .hero h1 {
 
-        font-size: 65px;
+        font-size: 48px;
 
         letter-spacing: -2px;
 
     }
 
 
-    /* -----------------------------------------
-       SEÇÕES
-    ----------------------------------------- */
+    .section-title h2 {
+
+        font-size: 32px;
+
+    }
+
 
     .video-section,
     .participate,
@@ -1870,268 +1625,302 @@ nav a {
 
     }
 
+
+
 }
 
 
+
+
 /* =========================================================
-   EUROPA - CELULAR
+   CORREÇÃO - EUROPA / ABA EXPANSÍVEL
+   Mantém o restante do CSS original intacto.
 ========================================================= */
+
+.europa,
+.europa-section {
+    position: relative;
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    overflow: visible;
+}
+
+.europa .europa-image,
+.europa-section .europa-image {
+    width: 100%;
+    height: 65vh;
+    min-height: 500px;
+    background-image: url("Imagens/informativo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.europa .europa-toggle,
+.europa-section .europa-toggle {
+    position: absolute;
+    left: 0;
+    top: calc(65vh - 3px);
+    width: 100%;
+    height: 6px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: #FAF4E4;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.europa .europa-toggle span,
+.europa-section .europa-toggle span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 68px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #FAF4E4;
+    color: #121212;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+    z-index: 30;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.europa .europa-toggle:hover span,
+.europa-section .europa-toggle:hover span {
+    transform: translate(-50%, -50%) scale(1.08);
+    box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
+
+.europa .europa-panel,
+.europa-section .europa-panel {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    background: #FAF4E4;
+    transition: max-height .8s cubic-bezier(.77,0,.18,1);
+}
+
+.europa .europa-panel.aberto,
+.europa-section .europa-panel.aberto {
+    max-height: 3000px;
+}
+
+.europa .europa-content,
+.europa-section .europa-content {
+    width: min(1000px, 92%);
+    margin: 0 auto;
+    padding: 55px 20px 80px;
+}
+
+.europa .europa-intro,
+.europa-section .europa-intro {
+    width: 100%;
+    margin: 0 auto 45px;
+    display: flex;
+    justify-content: center;
+}
+
+.europa .europa-intro img,
+.europa-section .europa-intro img {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    object-fit: contain;
+}
+
+.europa .europa-item,
+.europa-section .europa-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 210px;
+    margin-bottom: 25px;
+}
+
+.europa .europa-text,
+.europa-section .europa-text {
+    width: 60%;
+    padding-right: 20px;
+}
+
+.europa .europa-text h2,
+.europa-section .europa-text h2 {
+    margin: 0 0 8px;
+    font-size: 29px;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: #121212;
+    font-weight: 800;
+}
+
+.europa .europa-text p,
+.europa-section .europa-text p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #121212;
+}
+
+.europa .europa-item-image,
+.europa-section .europa-item-image {
+    width: 35%;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.europa .europa-item-image img,
+.europa-section .europa-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.europa .europa-toggle.aberto span,
+.europa-section .europa-toggle.aberto span {
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.europa .europa-toggle.aberto:hover span,
+.europa-section .europa-toggle.aberto:hover span {
+    transform: translate(-50%, -50%) rotate(180deg) scale(1.08);
+}
+
+/* =========================================================
+   GARANTE QUE OS TÓPICOS CONTINUEM STICKY
+   E SÓ APAREÇAM DEPOIS DA ABA EUROPA
+========================================================= */
+
+.topicos {
+    position: relative;
+    width: 100%;
+}
+
+.topico {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+.topico:nth-child(1) { z-index: 1; }
+.topico:nth-child(2) { z-index: 2; }
+.topico:nth-child(3) { z-index: 3; }
 
 @media (max-width: 700px) {
 
-
-    /* -----------------------------------------
-       FOTO
-    ----------------------------------------- */
-
-    .europa-image {
-
+    .europa .europa-image,
+    .europa-section .europa-image {
         height: 55vh;
-
         min-height: 400px;
-
+        background-position: center center;
     }
 
-
-    /* -----------------------------------------
-       LINHA
-    ----------------------------------------- */
-
-    .europa-toggle {
-
+    .europa .europa-toggle,
+    .europa-section .europa-toggle {
         top: calc(55vh - 3px);
-
     }
 
-
-    /* -----------------------------------------
-       BOTÃO
-    ----------------------------------------- */
-
-    .europa-toggle span {
-
+    .europa .europa-toggle span,
+    .europa-section .europa-toggle span {
         width: 58px;
-
         height: 58px;
-
         font-size: 25px;
-
     }
 
-
-    /* -----------------------------------------
-       ABA
-    ----------------------------------------- */
-
-    .europa-panel.aberto {
-
-        max-height: 3000px;
-
+    .europa .europa-panel.aberto,
+    .europa-section .europa-panel.aberto {
+        max-height: 4000px;
     }
 
-
-    /* -----------------------------------------
-       CONTEÚDO
-    ----------------------------------------- */
-
-    .europa-content {
-
+    .europa .europa-content,
+    .europa-section .europa-content {
         width: 90%;
-
         padding: 45px 0 65px;
-
     }
 
-
-    /* -----------------------------------------
-       IMAGEM DE INTRODUÇÃO
-    ----------------------------------------- */
-
-    .europa-intro {
-
-        margin-bottom: 35px;
-
-    }
-
-
-    .europa-intro img {
-
-        width: 100%;
-
-        max-width: 100%;
-
-    }
-
-
-    /* -----------------------------------------
-       ITENS
-    ----------------------------------------- */
-
-    .europa-item {
-
+    .europa .europa-item,
+    .europa-section .europa-item {
         min-height: 170px;
-
         margin-bottom: 20px;
-
     }
 
-
-    /* -----------------------------------------
-       TEXTO
-    ----------------------------------------- */
-
-    .europa-text {
-
+    .europa .europa-text,
+    .europa-section .europa-text {
         width: 62%;
-
         padding-right: 8px;
-
     }
 
-
-    .europa-text h2 {
-
+    .europa .europa-text h2,
+    .europa-section .europa-text h2 {
         font-size: 27px;
-
-        margin-bottom: 7px;
-
     }
 
-
-    .europa-text p {
-
+    .europa .europa-text p,
+    .europa-section .europa-text p {
         font-size: 12px;
-
         line-height: 1.4;
-
     }
 
-
-    /* -----------------------------------------
-       IMAGENS
-    ----------------------------------------- */
-
-    .europa-item-image {
-
+    .europa .europa-item-image,
+    .europa-section .europa-item-image {
         width: 38%;
-
         height: 160px;
-
     }
-
 }
-
-
-/* =========================================================
-   EUROPA - CELULARES PEQUENOS
-========================================================= */
 
 @media (max-width: 400px) {
 
-
-    .europa-image {
-
+    .europa .europa-image,
+    .europa-section .europa-image {
         height: 50vh;
-
         min-height: 360px;
-
     }
 
-
-    .europa-toggle {
-
+    .europa .europa-toggle,
+    .europa-section .europa-toggle {
         top: calc(50vh - 3px);
-
     }
 
-
-    .europa-toggle span {
-
+    .europa .europa-toggle span,
+    .europa-section .europa-toggle span {
         width: 52px;
-
         height: 52px;
-
         font-size: 23px;
-
     }
 
-
-    .europa-content {
-
-        width: 90%;
-
-    }
-
-
-    .europa-item {
-
+    .europa .europa-item,
+    .europa-section .europa-item {
         min-height: 150px;
-
     }
 
-
-    .europa-text h2 {
-
+    .europa .europa-text h2,
+    .europa-section .europa-text h2 {
         font-size: 24px;
-
     }
 
-
-    .europa-text p {
-
+    .europa .europa-text p,
+    .europa-section .europa-text p {
         font-size: 11px;
-
     }
 
-
-    .europa-item-image {
-
+    .europa .europa-item-image,
+    .europa-section .europa-item-image {
         height: 145px;
-
     }
-
-
-}
-
-
-/* =========================================================
-   RODAPÉ - CELULAR
-========================================================= */
-
-@media (max-width: 600px) {
-
-
-    .rodape-planeta {
-
-        height: 70px;
-
-    }
-
-
-    .rodape-planeta__orbita {
-
-        width: 70px;
-
-        height: 70px;
-
-    }
-
-
-    .rodape-planeta__imagem {
-
-        width: 50px;
-
-        height: 50px;
-
-    }
-
-
-    .rodape-planeta__texto text {
-
-        font-size: 47px;
-
-        letter-spacing: 1.5px;
-
-    }
-
 }

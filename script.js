@@ -57,8 +57,19 @@ europaToggle.addEventListener("click", function () {
 
     europaToggle.classList.toggle("aberto");
 
-});
 
+    /*
+       Atualiza o efeito dos tópicos
+       depois que a Europa muda de tamanho.
+    */
+
+    setTimeout(function() {
+
+        atualizarTopicos();
+
+    }, 850);
+
+});
 
 /* ================================================= */
 /* DESTAQUE AO PASSAR O MOUSE */

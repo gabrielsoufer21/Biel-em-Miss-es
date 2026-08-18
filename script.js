@@ -40,7 +40,24 @@ historiaToggle.addEventListener("click", function () {
 
 });
 
+/* =========================================================
+   ABA EUROPA
+========================================================= */
 
+const europaToggle =
+    document.getElementById("europaToggle");
+
+const europaPanel =
+    document.getElementById("europaPanel");
+
+
+europaToggle.addEventListener("click", function () {
+
+    europaPanel.classList.toggle("aberto");
+
+    europaToggle.classList.toggle("aberto");
+
+});
 
 
 /* ================================================= */

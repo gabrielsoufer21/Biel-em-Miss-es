@@ -914,7 +914,7 @@ nav a {
     width: 100%;
     height: var(--foto-altura);
 
-    background-image: url("Imagens/Informativo.png");
+    background-image: url("Imagens/informativo.png");
 
     background-size: 130%;
     background-position: center;

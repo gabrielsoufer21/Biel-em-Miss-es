@@ -967,9 +967,9 @@ nav a {
 }
 
 
-/* =========================================================
-   SEÇÃO EUROPA
-========================================================= */
+/* ================================================= */
+/* EUROPA */
+/* ================================================= */
 
 .europa-section {
 
@@ -978,31 +978,29 @@ nav a {
     width: 100%;
 
     /*
-       Altura inicial:
-       somente a foto aparece.
+       NÃO colocar height aqui.
+       A seção precisa crescer quando
+       a aba for aberta.
     */
-    height: 65vh;
 
-    min-height: 500px;
+    min-height: 0;
 
-    /*
-       Permite que o círculo
-       ultrapasse a foto.
-    */
     overflow: visible;
 
 }
 
 
-/* =========================================================
-   FOTO PRINCIPAL
-========================================================= */
+/* ================================================= */
+/* FOTO PRINCIPAL DA EUROPA */
+/* ================================================= */
 
 .europa-image {
 
     width: 100%;
 
-    height: 100%;
+    height: 65vh;
+
+    min-height: 500px;
 
     background-image: url("Imagens/informativo.png");
 
@@ -1015,9 +1013,9 @@ nav a {
 }
 
 
-/* =========================================================
-   LINHA DA SETA
-========================================================= */
+/* ================================================= */
+/* LINHA DA SETA */
+/* ================================================= */
 
 .europa-toggle {
 
@@ -1025,7 +1023,12 @@ nav a {
 
     left: 0;
 
-    bottom: 0;
+    /*
+       A linha fica exatamente
+       no final da foto.
+    */
+
+    top: calc(65vh - 3px);
 
     width: 100%;
 
@@ -1046,9 +1049,9 @@ nav a {
 }
 
 
-/* =========================================================
-   BOTÃO CIRCULAR
-========================================================= */
+/* ================================================= */
+/* BOTÃO CIRCULAR */
+/* ================================================= */
 
 .europa-toggle span {
 
@@ -1091,9 +1094,9 @@ nav a {
 }
 
 
-/* =========================================================
-   HOVER DA SETA
-========================================================= */
+/* ================================================= */
+/* HOVER DA SETA */
+/* ================================================= */
 
 .europa-toggle:hover span {
 
@@ -1107,9 +1110,9 @@ nav a {
 }
 
 
-/* =========================================================
-   ABA EUROPA
-========================================================= */
+/* ================================================= */
+/* ABA EUROPA */
+/* ================================================= */
 
 .europa-panel {
 
@@ -1117,8 +1120,9 @@ nav a {
 
     /*
        Fechada:
-       não aparece e não ocupa espaço.
+       não aparece.
     */
+
     max-height: 0;
 
     overflow: hidden;
@@ -1126,11 +1130,11 @@ nav a {
     background: #ffffff;
 
     /*
-       IMPORTANTE:
-       a aba fica no fluxo normal da página.
-       Portanto, quando abrir, ela empurra
-       a próxima seção para baixo.
+       A aba fica no fluxo normal.
+       Assim ela aumenta a altura da
+       seção e empurra a próxima seção.
     */
+
     position: relative;
 
     z-index: 1;
@@ -1141,23 +1145,20 @@ nav a {
 }
 
 
-/* =========================================================
-   ABA ABERTA
-========================================================= */
+/* ================================================= */
+/* ABA ABERTA */
+/* ================================================= */
 
 .europa-panel.aberto {
 
-    /*
-       Aumente caso coloque muito conteúdo.
-    */
     max-height: 2500px;
 
 }
 
 
-/* =========================================================
-   CONTEÚDO DA ABA
-========================================================= */
+/* ================================================= */
+/* CONTEÚDO DA ABA */
+/* ================================================= */
 
 .europa-content {
 
@@ -1170,9 +1171,9 @@ nav a {
 }
 
 
-/* =========================================================
-   IMAGEM DE INTRODUÇÃO
-========================================================= */
+/* ================================================= */
+/* IMAGEM DE INTRODUÇÃO */
+/* ================================================= */
 
 .europa-intro {
 
@@ -1202,9 +1203,9 @@ nav a {
 }
 
 
-/* =========================================================
-   ITENS DA EUROPA
-========================================================= */
+/* ================================================= */
+/* ITENS DA EUROPA */
+/* ================================================= */
 
 .europa-item {
 
@@ -1223,9 +1224,9 @@ nav a {
 }
 
 
-/* =========================================================
-   TEXTO DOS ITENS
-========================================================= */
+/* ================================================= */
+/* TEXTO DOS ITENS */
+/* ================================================= */
 
 .europa-text {
 
@@ -1236,9 +1237,9 @@ nav a {
 }
 
 
-/* =========================================================
-   TÍTULO EUROPA
-========================================================= */
+/* ================================================= */
+/* TÍTULO EUROPA */
+/* ================================================= */
 
 .europa-text h2 {
 
@@ -1257,9 +1258,9 @@ nav a {
 }
 
 
-/* =========================================================
-   TEXTO
-========================================================= */
+/* ================================================= */
+/* TEXTO */
+/* ================================================= */
 
 .europa-text p {
 
@@ -1274,9 +1275,9 @@ nav a {
 }
 
 
-/* =========================================================
-   ÁREA DAS IMAGENS
-========================================================= */
+/* ================================================= */
+/* ÁREA DAS IMAGENS */
+/* ================================================= */
 
 .europa-item-image {
 
@@ -1293,9 +1294,9 @@ nav a {
 }
 
 
-/* =========================================================
-   IMAGENS DOS ITENS
-========================================================= */
+/* ================================================= */
+/* IMAGENS DOS ITENS */
+/* ================================================= */
 
 .europa-item-image img {
 
@@ -1308,9 +1309,9 @@ nav a {
 }
 
 
-/* =========================================================
-   SETA QUANDO ESTÁ ABERTA
-========================================================= */
+/* ================================================= */
+/* SETA ABERTA */
+/* ================================================= */
 
 .europa-toggle.aberto span {
 
@@ -1320,10 +1321,6 @@ nav a {
 
 }
 
-
-/* =========================================================
-   HOVER DA SETA ABERTA
-========================================================= */
 
 .europa-toggle.aberto:hover span {
 
@@ -1335,31 +1332,563 @@ nav a {
 }
 
 
+/* ================================================= */
+/* PARTICIPAR */
+/* ================================================= */
+
+.participate {
+
+    background: #020202;
+
+}
+
+
+.participate-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.participate-card {
+
+    background: #121212;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+
+.participate-card img {
+
+    width: 100%;
+
+    height: 240px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.card-content {
+
+    padding: 25px;
+
+}
+
+
+.card-content h3 {
+
+    margin: 10px 0;
+
+    font-size: 22px;
+
+}
+
+
+.card-content p {
+
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+/* ================================================= */
+/* SEÇÃO DOS 3 TÓPICOS */
+/* ================================================= */
+
+.topicos {
+
+    position: relative;
+
+    width: 100%;
+
+}
+
+
+/* ================================================= */
+/* CADA TÓPICO */
+/* ================================================= */
+
+.topico {
+
+    position: sticky;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    min-height: 600px;
+
+    overflow: hidden;
+
+}
+
+
+/* ================================================= */
+/* ORDEM DOS TÓPICOS */
+/* ================================================= */
+
+.topico:nth-child(1) {
+
+    z-index: 1;
+
+}
+
+
+.topico:nth-child(2) {
+
+    z-index: 2;
+
+}
+
+
+.topico:nth-child(3) {
+
+    z-index: 3;
+
+}
+
+
+/* ================================================= */
+/* IMAGEM */
+/* ================================================= */
+
+.topico-imagem {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* ================================================= */
+/* BLOCO DE CONTEÚDO */
+/* ================================================= */
+
+.topico-conteudo {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 58%;
+
+    height: 100%;
+
+    background: #121212;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding-left: 7%;
+
+    padding-right: 10%;
+
+    z-index: 2;
+
+}
+
+
+/* ================================================= */
+/* DIAGONAL */
+/* ================================================= */
+
+.topico-conteudo::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    right: -180px;
+
+    width: 200px;
+
+    height: 100%;
+
+    background: #121212;
+
+    clip-path: polygon(
+        0 0,
+        0 100%,
+        100% 50%
+    );
+
+}
+
+
+/* ================================================= */
+/* NÚMERO */
+/* ================================================= */
+
+.numero {
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    color: #FAF4E4;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ================================================= */
+/* TÍTULO */
+/* ================================================= */
+
+.topico-conteudo h2 {
+
+    font-size: clamp(45px, 6vw, 80px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* ================================================= */
+/* TEXTO */
+/* ================================================= */
+
+.topico-conteudo p {
+
+    max-width: 450px;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    color: #FAF4E4;
+
+}
+
+
+/* ================================================= */
+/* SEÇÃO FINAL */
+/* ================================================= */
+
+.final-section {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background-image:
+
+        url("Imagens/mapa.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-color: #FAF4E4;
+
+}
+
+
+/* ================================================= */
+/* TÍTULO FINAL */
+/* ================================================= */
+
+.final-section h2 {
+
+    font-size: 50px;
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin: -10px 0;
+
+    color: #121212;
+
+}
+
+
+/* ================================================= */
+/* BOTÃO FINAL */
+/* ================================================= */
+
+.final-section a {
+
+    background-color: #121212;
+
+    color: #FAF4E4;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   RODAPÉ - PLANETA
+========================================================= */
+
+.rodape-planeta {
+
+    width: 100%;
+
+    height: 135px;
+
+    background: #FAF4E4;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   ÓRBITA
+========================================================= */
+
+.rodape-planeta__orbita {
+
+    position: relative;
+
+    width: 100px;
+
+    height: 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =========================================================
+   PLANETA
+========================================================= */
+
+.rodape-planeta__imagem {
+
+    position: absolute;
+
+    z-index: 2;
+
+    width: 70px;
+
+    height: 70px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+
+    animation: planeta-flutuar 4s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   TEXTO CIRCULAR
+========================================================= */
+
+.rodape-planeta__texto {
+
+    position: absolute;
+
+    z-index: 3;
+
+    width: 90%;
+
+    height: 90%;
+
+    overflow: visible;
+
+    animation: texto-planeta-girar 15s linear infinite;
+
+}
+
+
+/* =========================================================
+   TEXTO DO PLANETA
+========================================================= */
+
+.rodape-planeta__texto text {
+
+    fill: #121212;
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    font-size: 47px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   ROTAÇÃO DO TEXTO
+========================================================= */
+
+@keyframes texto-planeta-girar {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   MOVIMENTO DO PLANETA
+========================================================= */
+
+@keyframes planeta-flutuar {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-3px);
+
+    }
+
+}
+
+
 /* =========================================================
    CELULAR
+========================================================= */
+
+@media (max-width: 768px) {
+
+
+    /* -----------------------------------------
+       MENU
+    ----------------------------------------- */
+
+    .menu {
+
+        height: 65px;
+
+        padding: 0 20px;
+
+    }
+
+
+    nav {
+
+        display: none;
+
+    }
+
+
+    /* -----------------------------------------
+       HERO
+    ----------------------------------------- */
+
+    .hero {
+
+        padding: 10px 20px 20px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 65px;
+
+        letter-spacing: -2px;
+
+    }
+
+
+    /* -----------------------------------------
+       SEÇÕES
+    ----------------------------------------- */
+
+    .video-section,
+    .participate,
+    .final-section {
+
+        padding: 100px 20px;
+
+    }
+
+}
+
+
+/* =========================================================
+   EUROPA - CELULAR
 ========================================================= */
 
 @media (max-width: 700px) {
 
 
     /* -----------------------------------------
-       SEÇÃO / FOTO
+       FOTO
     ----------------------------------------- */
 
-    .europa-section {
+    .europa-image {
 
         height: 55vh;
 
         min-height: 400px;
-
-    }
-
-
-    .europa-image {
-
-        background-size: cover;
-
-        background-position: center;
 
     }
 
@@ -1370,7 +1899,7 @@ nav a {
 
     .europa-toggle {
 
-        height: 6px;
+        top: calc(55vh - 3px);
 
     }
 
@@ -1479,7 +2008,7 @@ nav a {
 
 
     /* -----------------------------------------
-       IMAGEM
+       IMAGENS
     ----------------------------------------- */
 
     .europa-item-image {
@@ -1494,17 +2023,13 @@ nav a {
 
 
 /* =========================================================
-   CELULARES PEQUENOS
+   EUROPA - CELULARES PEQUENOS
 ========================================================= */
 
 @media (max-width: 400px) {
 
 
-    /* -----------------------------------------
-       SEÇÃO
-    ----------------------------------------- */
-
-    .europa-section {
+    .europa-image {
 
         height: 50vh;
 
@@ -1513,9 +2038,12 @@ nav a {
     }
 
 
-    /* -----------------------------------------
-       BOTÃO
-    ----------------------------------------- */
+    .europa-toggle {
+
+        top: calc(50vh - 3px);
+
+    }
+
 
     .europa-toggle span {
 
@@ -1528,31 +2056,12 @@ nav a {
     }
 
 
-    /* -----------------------------------------
-       CONTEÚDO
-    ----------------------------------------- */
-
     .europa-content {
 
         width: 90%;
 
     }
 
-
-    /* -----------------------------------------
-       INTRODUÇÃO
-    ----------------------------------------- */
-
-    .europa-intro {
-
-        margin-bottom: 30px;
-
-    }
-
-
-    /* -----------------------------------------
-       ITENS
-    ----------------------------------------- */
 
     .europa-item {
 
@@ -1561,20 +2070,12 @@ nav a {
     }
 
 
-    /* -----------------------------------------
-       TÍTULO
-    ----------------------------------------- */
-
     .europa-text h2 {
 
         font-size: 24px;
 
     }
 
-
-    /* -----------------------------------------
-       TEXTO
-    ----------------------------------------- */
 
     .europa-text p {
 
@@ -1583,565 +2084,18 @@ nav a {
     }
 
 
-    /* -----------------------------------------
-       IMAGEM
-    ----------------------------------------- */
-
     .europa-item-image {
 
         height: 145px;
 
     }
 
-}
-/* ================================================= */
-/* PARTICIPAR */
-/* ================================================= */
-
-.participate {
-
-    background: #020202;
-
-}
-
-
-.participate-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-
-}
-
-
-.participate-card {
-
-    background: #121212;
-
-    border-radius: 8px;
-
-    overflow: hidden;
-
-}
-
-
-.participate-card img {
-
-    width: 100%;
-
-    height: 240px;
-
-    object-fit: cover;
-
-    display: block;
-
-}
-
-
-.card-content {
-
-    padding: 25px;
-
-}
-
-
-.card-content h3 {
-
-    margin: 10px 0;
-
-    font-size: 22px;
-
-}
-
-
-.card-content p {
-
-    color: #666;
-
-    font-size: 13px;
-
-    line-height: 1.6;
-
-}
-
-
-/* ========================================= */
-/* SEÇÃO DOS 3 TÓPICOS */
-/* ========================================= */
-
-.topicos {
-
-    position: relative;
-
-    width: 100%;
-
-}
-
-
-/* ========================================= */
-/* CADA TÓPICO */
-/* ========================================= */
-
-.topico {
-
-    position: sticky;
-
-    top: 0;
-
-    width: 100%;
-
-    height: 100vh;
-
-    min-height: 600px;
-
-    overflow: hidden;
-
-}
-
-
-/* ========================================= */
-/* ORDEM DOS TÓPICOS */
-/* ========================================= */
-
-/*
-   Cada tópico seguinte fica por cima
-   do tópico anterior durante a rolagem.
-*/
-
-.topico:nth-child(1) {
-
-    z-index: 1;
-
-}
-
-
-.topico:nth-child(2) {
-
-    z-index: 2;
-
-}
-
-
-.topico:nth-child(3) {
-
-    z-index: 3;
-
-}
-
-
-/* ========================================= */
-/* IMAGEM */
-/* ========================================= */
-
-.topico-imagem {
-
-    position: absolute;
-
-    top: 0;
-
-    left: 0;
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-}
-
-
-/* ========================================= */
-/* BLOCO DE CONTEÚDO */
-/* ========================================= */
-
-.topico-conteudo {
-
-    position: absolute;
-
-    top: 0;
-
-    left: 0;
-
-    width: 58%;
-
-    height: 100%;
-
-    background: #121212;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    padding-left: 7%;
-
-    padding-right: 10%;
-
-    z-index: 2;
-
-}
-
-
-/* ========================================= */
-/* DIAGONAL */
-/* ========================================= */
-
-.topico-conteudo::after {
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-
-    right: -180px;
-
-    width: 200px;
-
-    height: 100%;
-
-    background: #121212;
-
-    clip-path: polygon(
-        0 0,
-        0 100%,
-        100% 50%
-    );
-
-}
-
-
-/* ========================================= */
-/* NÚMERO */
-/* ========================================= */
-
-.numero {
-
-    font-size: 14px;
-
-    letter-spacing: 3px;
-
-    color: #FAF4E4;
-
-    margin-bottom: 25px;
-
-}
-
-
-/* ========================================= */
-/* TÍTULO */
-/* ========================================= */
-
-.topico-conteudo h2 {
-
-    font-size: clamp(45px, 6vw, 80px);
-
-    line-height: 0.95;
-
-    letter-spacing: -4px;
-
-    margin-bottom: 30px;
-
-}
-
-
-/* ========================================= */
-/* TEXTO */
-/* ========================================= */
-
-.topico-conteudo p {
-
-    max-width: 450px;
-
-    font-size: 15px;
-
-    line-height: 1.6;
-
-    color: #FAF4E4;
-
-}
-
-
-/* ================================================= */
-/* SEÇÃO FINAL */
-/* ================================================= */
-
-.final-section {
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    text-align: center;
-
-    background-image:
-
-        url("Imagens/mapa.png");
-
-    background-size: cover;
-
-    background-position: center;
-
-    background-color: #FAF4E4;
-
-}
-
-
-/* ========================================= */
-/* TÍTULO FINAL */
-/* ========================================= */
-
-.final-section h2 {
-
-    font-size: 50px;
-
-    line-height: 1;
-
-    letter-spacing: -3px;
-
-    margin: -10px 0;
-
-    color: #121212;
-
-}
-
-
-/* ========================================= */
-/* BOTÃO FINAL */
-/* ========================================= */
-
-.final-section a {
-
-    background-color: #121212;
-
-    color: #FAF4E4;
-
-    font-size: 13px;
 
 }
 
 
 /* =========================================================
-   RODAPÉ - PLANETA
-========================================================= */
-
-.rodape-planeta {
-
-    width: 100%;
-
-    height: 135px;
-
-    background: #FAF4E4;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    overflow: hidden;
-
-}
-
-
-/* =========================================================
-   ÓRBITA
-========================================================= */
-
-.rodape-planeta__orbita {
-
-    position: relative;
-
-    width: 100px;
-
-    height: 100px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-}
-
-
-/* =========================================================
-   PLANETA
-========================================================= */
-
-.rodape-planeta__imagem {
-
-    position: absolute;
-
-    z-index: 2;
-
-    width: 70px;
-
-    height: 70px;
-
-    object-fit: contain;
-
-    border-radius: 50%;
-
-    animation: planeta-flutuar 4s ease-in-out infinite;
-
-}
-
-
-/* =========================================================
-   TEXTO CIRCULAR
-========================================================= */
-
-.rodape-planeta__texto {
-
-    position: absolute;
-
-    z-index: 3;
-
-    width: 90%;
-
-    height: 90%;
-
-    overflow: visible;
-
-    animation: texto-planeta-girar 15s linear infinite;
-
-}
-
-
-/* =========================================================
-   TEXTO
-========================================================= */
-
-.rodape-planeta__texto text {
-
-    fill: #121212;
-
-    font-family: "Poppins", Arial, sans-serif;
-
-    font-size: 47px;
-
-    font-weight: 600;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-}
-
-
-/* =========================================================
-   ROTAÇÃO DO TEXTO
-========================================================= */
-
-@keyframes texto-planeta-girar {
-
-    from {
-
-        transform: rotate(0deg);
-
-    }
-
-    to {
-
-        transform: rotate(360deg);
-
-    }
-
-}
-
-
-/* =========================================================
-   MOVIMENTO SUTIL DO PLANETA
-========================================================= */
-
-@keyframes planeta-flutuar {
-
-    0%,
-    100% {
-
-        transform: translateY(0);
-
-    }
-
-    50% {
-
-        transform: translateY(-3px);
-
-    }
-
-}
-
-
-/* ================================================= */
-/* CELULAR */
-/* ================================================= */
-
-@media (max-width: 768px) {
-
-
-    /* =========================================
-       MENU
-    ========================================= */
-
-    .menu {
-
-        height: 65px;
-
-        padding: 0 20px;
-
-    }
-
-
-    nav {
-
-        display: none;
-
-    }
-
-
-    /* =========================================
-       HERO
-    ========================================= */
-
-    .hero {
-
-        padding: 10px 20px 20px;
-
-    }
-
-
-    .hero h1 {
-
-        font-size: 65px;
-
-        letter-spacing: -2px;
-
-    }
-
-
-    /* =========================================
-       SEÇÕES
-    ========================================= */
-
-    .video-section,
-    .participate,
-    .final-section {
-
-        padding: 100px 20px;
-
-    }
-
-}
-
-
-/* =========================================================
-   CELULAR - RODAPÉ PLANETA
+   RODAPÉ - CELULAR
 ========================================================= */
 
 @media (max-width: 600px) {

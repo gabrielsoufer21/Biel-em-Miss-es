@@ -3147,15 +3147,18 @@ nav a:hover {
 
 @media (max-width: 768px) {
 
-    .europa-section {
+  .europa-section {
 
-        min-height: var(--foto-altura);
+    height: auto;
 
-        background: #121212;
+    min-height: var(--foto-altura);
 
-        z-index: 10;
+    background: #121212;
 
-    }
+    z-index: 10;
+
+    overflow: visible;
+}
 
     .europa-image {
 
@@ -3188,3 +3191,102 @@ nav a:hover {
     text-align: justify;
 
 }
+
+
+
+
+
+
+
+/* =========================================================
+   CORREÇÃO — SEÇÃO EUROPA
+   A ABA ABERTA EMPURRA A PRÓXIMA SEÇÃO
+========================================================= */
+
+.europa-section {
+
+    position: relative;
+
+    width: 100%;
+
+    /*
+       A seção NÃO pode ter altura fixa.
+       Ela cresce quando .europa-panel abre.
+    */
+    height: auto;
+
+    min-height: var(--foto-altura);
+
+    margin: 0;
+
+    padding: 0;
+
+    background: #121212;
+
+    overflow: visible;
+
+    --foto-altura: max(65vh, 500px);
+}
+
+
+/* =========================================================
+   ÁREA DA FOTO
+========================================================= */
+
+.europa-image {
+
+    position: relative;
+
+    width: 100%;
+
+    height: var(--foto-altura);
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   ABA DE TEXTO
+========================================================= */
+
+.europa-panel {
+
+    position: relative;
+
+    width: 100%;
+
+    max-height: 0;
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    background: #FAF4E4;
+
+    /*
+       IMPORTANTE:
+       não usar absolute.
+       A aba ocupa espaço e empurra
+       a próxima seção para baixo.
+    */
+    transform: none;
+
+    z-index: 10;
+
+    transition:
+        max-height 0.7s cubic-bezier(.77, 0, .18, 1);
+}
+
+
+/* =========================================================
+   ABA ABERTA
+========================================================= */
+
+.europa-panel.aberto {
+
+    max-height: 1600px;
+}
+
+
